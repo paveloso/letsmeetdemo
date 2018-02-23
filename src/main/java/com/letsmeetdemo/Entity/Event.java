@@ -1,16 +1,29 @@
 package com.letsmeetdemo.Entities;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name="event")
 public class Event {
 
+    @Id
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    @Column(name="id")
     private int id;
 
+    @Column(name="date")
+    private String date;
+
+    @Column(name="name")
     private String name;
 
+    @Column(name="info")
     private String info;
 
     public Event() {}
 
-    public Event(String name, String info) {
+    public Event(String date, String name, String info) {
+        this.date = date;
         this.name = name;
         this.info = info;
     }
@@ -21,6 +34,14 @@ public class Event {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
     }
 
     public String getName() {
@@ -43,6 +64,7 @@ public class Event {
     public String toString() {
         return "Event{" +
                 "id=" + id +
+                ", date='" + date + '\'' +
                 ", name='" + name + '\'' +
                 ", info='" + info + '\'' +
                 '}';
