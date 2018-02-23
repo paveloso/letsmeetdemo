@@ -1,4 +1,4 @@
-package com.letsmeetdemo.Entities;
+package com.letsmeetdemo.Entity;
 
 import javax.persistence.*;
 
