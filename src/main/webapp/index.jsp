@@ -16,6 +16,6 @@ This is my index page for the 'letsmeetdemo' project
 <p>
     Coming soon...
 <p>
-    but for now here is a link for a list - <a href="/event/list">click</a>
+    but for now here is a link for a list of Events - <a href="/event/list">click</a>
 </body>
 </html>

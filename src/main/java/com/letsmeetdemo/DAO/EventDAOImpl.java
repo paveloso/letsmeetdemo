@@ -32,4 +32,12 @@ public class EventDAOImpl implements EventDAO {
         // return the results
         return events;
     }
+
+    public void saveEvent(Event theEvent) {
+
+        Session currentSession = sessionFactory.getCurrentSession();
+
+        currentSession.save(theEvent);
+
+    }
 }
